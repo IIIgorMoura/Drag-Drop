@@ -38,4 +38,14 @@ function soltarTarefa(event){
     event.preventDefault();
 };
 
+if(tarefaArrastada){
+    this.querySelector('.tarefas').appendChild(tarefaArrastada);
+    tarefaArrastada = null;
+};
 
+
+
+
+const formAdicionarTarefa = document.getElementById('adicionar-tarefa');
+
+formAdicionarTarefa.addEventListener('submit', adicionarTarefa)
