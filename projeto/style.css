@@ -1,0 +1,12 @@
+/* BASE */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.espaco-colunas {
+    display: flex;
+
+    justify-content: space-around;
+}
