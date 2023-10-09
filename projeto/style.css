@@ -11,6 +11,11 @@
     justify-content: space-around;
 }
 
+body {
+    background-image: url(fundoSite.jpg);
+    background-size: cover;
+}
+
 .coluna {
     display: flex;
     flex-direction: column;
@@ -26,8 +31,11 @@
 
     background-color: #2b2b2b;
     color: #fff;
+    opacity: 0.8;
 
     font: 150 20px arial;
+
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* header */
@@ -39,7 +47,7 @@
     justify-content: space-around;
     align-items: center;
 
-    font: 150 20px arial; 
+    font: 150 20px arial;
 
     background-color: rgb(2, 63, 218);
     color: #fff;
@@ -64,6 +72,7 @@ button {
 
     font: 50 15px arial;
 }
+
 /* cartoes */
 h2 {
     margin: 20px 0px 10px;
@@ -87,4 +96,3 @@ li {
 
     font: 50 15px arial;
 }
-
