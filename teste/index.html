@@ -41,8 +41,37 @@
             // dataTransfer = guarda texto enquanto estamos arrastando
 
             // setData = o que irá fzr com esse dado
-            event.dataTransfer.setData('text/plain', 'box1')
-        })
+            // pra func tem q colocar tipo de txt e onde está 
+            event.dataTransfer.setData('text/plain', 'box1');
+        });
+        box2.addEventListener('dragstart', function(event){
+            event.dataTransfer.setData('text/plain', 'box2');
+        });
+
+
+        box1.addEventListener('dragover', function(event){
+            event.preventDefault();
+        });
+        box2.addEventListener('dragover', function(event){
+            event.preventDefault();
+        });
+
+        
+        box1.addEventListener('drop', function(event){
+            const id = event.dataTransfer.getData('text');
+            if (id === 'box2'){
+                //parentNode = só ler info
+
+                //insertBefore = fzr a troca, colocando 1 antes do outro
+                box1.parentNode.insertBefore(box2, box1);
+            };
+        });
+        box2.addEventListener('drop', function(event){
+            const id = event.dataTransfer.getData('text');
+            if (id === 'box1'){
+                box2.parentNode.insertBefore(box1, box2);
+            };
+        });
     </script>
 </body>
 </html>
